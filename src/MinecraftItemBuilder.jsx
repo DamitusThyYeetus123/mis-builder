@@ -2760,18 +2760,6 @@ export default function MinecraftItemBuilder() {
                   Advanced Filters
                 </button>
 
-                {/* Reset Color Filter Button */}
-                <button
-                  onClick={() => {
-                    setHueRange([0, 360]);
-                    setSatRange([0, 100]);
-                    setLumRange([0, 100]);
-                  }}
-                  className="px-3 py-1.5 bg-stone-700 hover:bg-stone-600 rounded text-xs transition-colors whitespace-nowrap"
-                >
-                  Reset Color
-                </button>
-
                 {/* Export Button */}
                 <button
                   onClick={exportCells}
@@ -3167,6 +3155,18 @@ export default function MinecraftItemBuilder() {
                         onSatChange={setSatRange}
                         onLumChange={setLumRange}
                       />
+                      
+                      {/* Reset Color Filter Button */}
+                      <button
+                        onClick={() => {
+                          setHueRange([0, 360]);
+                          setSatRange([0, 100]);
+                          setLumRange([0, 100]);
+                        }}
+                        className="mt-2 px-3 py-1.5 bg-stone-700 hover:bg-stone-600 rounded text-xs transition-colors whitespace-nowrap"
+                      >
+                        Reset Color
+                      </button>
                     </div>
                   </div>
                 </div>
